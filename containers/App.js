@@ -53,9 +53,9 @@ class App extends Component{
                 </div>
 				<div>
 					<h1>checkbox</h1>
-					<Checkbox  defaultChecked={false} text="Checkbox" />
-					<Checkbox  defaultChecked={false} disabled={true} text="disabled" />
-					<Checkbox  defaultChecked={true} disabled={true} text="disabled" />
+					<Checkbox text="Checkbox" />
+					<Checkbox disabled={true} text="disabled" />
+					<Checkbox defaultChecked={true} disabled={true} text="disabled" />
 				</div>
 				<div>
 					<h1>RadioGroup</h1>

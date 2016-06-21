@@ -4,17 +4,17 @@ import classNames from 'classnames'
 
 /*
  * @Component Checkbox 
- * @param {string} type     默认 dot || count
- * @param {string} text     显示文本 '通知' || '消息'
- * @param {number} count    数字
- * @param {number} overflowCount     count>overflowCount,显示count+
+ * @param {bool} defaultChecked     选中 default: false || true
+ * @param {bool} disabled    不可单击 default false || true
+ * @param {string} classVal   新增加的class值  
+ * @param {func} onClick     callback
  */
 
 class Checkbox extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            defaultChecked : this.props.defaultChecked,
+            defaultChecked : this.props.defaultChecked || false,
             disabled 	   : this.props.disabled || false,
             classVal       : this.props.className || '',
         };
@@ -58,6 +58,10 @@ class Checkbox extends Component{
             </div>
         );
     }
+}
+
+Checkbox.propTypes = {
+	
 }
 
 export default Checkbox

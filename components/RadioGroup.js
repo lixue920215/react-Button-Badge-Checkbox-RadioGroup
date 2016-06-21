@@ -2,7 +2,13 @@ import './style/react.css'
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-
+/*
+* @Component RadioGroup
+* @param {string} name radio name值
+* @param {string} selectedValue 默认选中radio的value值
+* @param {array} value radio的value值
+* @param {func} onChange 单击改变状态
+*/
 export class Radio extends Component{
 	constructor(props) {
 		super(props);
@@ -41,6 +47,7 @@ export class RadioGroup extends Component{
 	
 	render() {
 		const { name, selectedValue, onChange, value } = this.props;
+		
 		let propsChildren = this.state.listValue.map(function (item) {
 			return (<Radio value={item} name={name} selectedValue={selectedValue} onChange={onChange} />);
 		});
@@ -52,4 +59,7 @@ export class RadioGroup extends Component{
 		);
 	}
 }
-
+													 
+RadioGroup.propTypes = {
+													 
+}
