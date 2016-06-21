@@ -2,13 +2,6 @@ import './style/react.css'
 import React, { Component, PropTypes } from 'react'
 import classNames from 'classnames'
 
-/*
- * @Component Checkbox 
- * @param {string} type     默认 dot || count
- * @param {string} text     显示文本 '通知' || '消息'
- * @param {number} count    数字
- * @param {number} overflowCount     count>overflowCount,显示count+
- */
 
 export class Radio extends Component{
 	constructor(props) {
